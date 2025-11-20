@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloth Factory | Shop</title>
+  <link rel="stylesheet" href="styles/glass-core.css" />
+  <link rel="stylesheet" href="shop.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page page-shop">
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="logo"><a href="./index.html"><img id="logo" src="image copy 3.png" alt="Cloth Factory logo" /></a>
+      </div>
+      <div class="nav-actions">
+        <ul class="navitems">
+          <li class="ni"><a href="./index.html">home</a></li>
+          <li class="ni"><a href="./shop.html" aria-current="page">shop</a></li>
+          <li class="ni"><a href="./about.html">about</a></li>
+          <li class="ni"><a href="./cart.html">cart (<span id="cartCount">0</span>)</a></li>
+          <li class="ni"><button id="openCartBtn" class="cart-trigger" aria-label="Open cart">🛒 <span
+                id="cartCountNav">0</span></button></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☼</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </nav>
+
+    <header class="hero reveal">
+      <div>
+        <p class="detail-eyebrow">full glass capsule</p>
+        <h1 class="head">Shop the drop</h1>
+        <p class="hero-copy">
+          Layered gradients, hybrid fabrics, and playful prints built for bold wardrobes. Tap into the featured
+          stories below.
+        </p>
+      </div>
+    </header>
+
+    <section class="cards">
+      <a class="product-card reveal" data-tilt-card data-quick-view="bugs-bunny" href="./productpage.html">
+        <img class="product-card__img" src="./image copy 4.png" alt="Bugs Bunny: Hot Moves t-shirt" />
+        <h3 class="product-card__name">Bugs Bunny: Hot Moves</h3>
+        <span class="product-card__cta">Quick View &rarr;</span>
+      </a>
+      <a class="product-card reveal" data-tilt-card data-quick-view="samurai-jack" href="./product2.html">
+        <img class="product-card__img" src="./image copy 5.png" alt="Samurai Jack: Warrior t-shirt" />
+        <h3 class="product-card__name">Samurai Jack: Warrior</h3>
+        <span class="product-card__cta">Quick View &rarr;</span>
+      </a>
+      <a class="product-card reveal" data-tilt-card data-quick-view="spider-man" href="./product-spiderman.html">
+        <img class="product-card__img" src="./image copy 6.png" alt="Spider-Man: Hero Swing t-shirt" />
+        <h3 class="product-card__name">Spider-Man: Hero Swing</h3>
+        <span class="product-card__cta">Quick View &rarr;</span>
+      </a>
+      <a class="product-card reveal" data-tilt-card data-quick-view="jurassic-park" href="./product-jurassic.html">
+        <img class="product-card__img" src="./image copy 7.png" alt="Jurassic Park: Tilescape t-shirt" />
+        <h3 class="product-card__name">Jurassic Park: Tilescape</h3>
+        <span class="product-card__cta">Quick View &rarr;</span>
+      </a>
+      <a class="product-card reveal" data-tilt-card data-quick-view="super-pants" href="./product-superpants.html">
+        <img class="product-card__img" src="./image copy 8.png" alt="Super Pants: Brown Stripes t-shirt" />
+        <h3 class="product-card__name">Super Pants: Brown Stripes</h3>
+        <span class="product-card__cta">Quick View &rarr;</span>
+      </a>
+    </section>
+  </div>
+  <footer class="footer">
+    <h6>cloth factory &middot; all rights reserved</h6>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer__backdrop" id="cartDrawerBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__content">
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="closeCartBtn" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-drawer__items" id="cartDrawerItems">
+        <div class="cart-drawer__empty" id="cartDrawerEmpty">
+          <div class="cart-drawer__empty-icon">🛒</div>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-drawer__footer" id="cartDrawerFooter" style="display: none;">
+        <div class="cart-drawer__total">
+          <span>Total:</span>
+          <span class="paise" id="cartDrawerTotal">rs-0</span>
+        </div>
+        <a href="./checkout.html" class="btn cart-drawer__checkout">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="quick-view-modal" id="quickViewModal">
+    <div class="quick-view__backdrop" id="quickViewBackdrop"></div>
+    <div class="quick-view__content">
+      <button class="quick-view__close" id="closeQuickViewBtn" aria-label="Close">×</button>
+      <div class="quick-view__grid">
+        <div>
+          <img class="quick-view__image" id="quickViewImage" src="" alt="" />
+        </div>
+        <div class="quick-view__details">
+          <p class="quick-view__eyebrow" id="quickViewEyebrow">signature graphic tee</p>
+          <h2 class="quick-view__title" id="quickViewTitle"></h2>
+          <p class="quick-view__description" id="quickViewDescription"></p>
+          <div class="quick-view__price" id="quickViewPrice"></div>
+          <div>
+            <label class="size-selector__label">Select Size:</label>
+            <div class="size-selector" id="quickViewSizes">
+              <button class="size-option" data-size="S">S</button>
+              <button class="size-option selected" data-size="M">M</button>
+              <button class="size-option" data-size="L">L</button>
+              <button class="size-option" data-size="XL">XL</button>
+              <button class="size-option" data-size="XXL">XXL</button>
+            </div>
+          </div>
+          <button class="btn" id="quickViewAddToCart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

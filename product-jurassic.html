@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloth Factory | Jurassic Park: Tilescape</title>
+  <link rel="stylesheet" href="styles/glass-core.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+
+<body class="page page-product">
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="logo"><a href="./index.html"><img id="logo" src="image copy 3.png" alt="Cloth Factory logo" /></a>
+      </div>
+      <div class="nav-actions">
+        <ul class="navitems">
+          <li class="ni"><a href="./index.html">home</a></li>
+          <li class="ni"><a href="./shop.html">shop</a></li>
+          <li class="ni"><a href="./about.html">about</a></li>
+          <li class="ni"><a href="./cart.html">cart (<span id="cartCount">0</span>)</a></li>
+          <li class="ni"><button id="openCartBtn" class="cart-trigger" aria-label="Open cart">🛒 <span
+                id="cartCountNav">0</span></button></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☼</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </nav>
+    <section class="product-detail glass-panel reveal" data-tilt-card>
+      <div class="detail-layout">
+        <div class="detail-media">
+          <img class="detail-image" src="./image copy 7.png" alt="Jurassic Park: Tilescape t-shirt" />
+        </div>
+        <div class="detail-copy">
+          <p class="detail-eyebrow">signature graphic tee</p>
+          <h3 class="detail-title">Jurassic Park: Tilescape</h3>
+          <p class="detail-description">
+            Retro Jurassic Park badgework layered over a tiled topography print. Heavyweight cotton and a boxy cut keep
+            the silhouette sharp while staying breathable.
+          </p>
+          <div class="detail-badges">
+            <span class="badge">retro</span>
+            <span class="badge">heavyweight</span>
+            <span class="badge">limited</span>
+          </div>
+          <div class="detail-meta">
+            <span class="paise">rs-1699</span>
+          </div>
+          <div class="detail-actions">
+            <button class="btn add-to-cart" data-name="Jurassic Park: Tilescape" data-price="1699"
+              data-image="./image copy 7.png">Add to cart</button>
+            <a class="btn btn--ghost" href="./shop.html">Back to shop</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <h6>cloth factory &middot; all rights reserved</h6>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer__backdrop" id="cartDrawerBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__content">
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="closeCartBtn" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-drawer__items" id="cartDrawerItems">
+        <div class="cart-drawer__empty" id="cartDrawerEmpty">
+          <div class="cart-drawer__empty-icon">🛒</div>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-drawer__footer" id="cartDrawerFooter" style="display: none;">
+        <div class="cart-drawer__total">
+          <span>Total:</span>
+          <span class="paise" id="cartDrawerTotal">rs-0</span>
+        </div>
+        <a href="./checkout.html" class="btn cart-drawer__checkout">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

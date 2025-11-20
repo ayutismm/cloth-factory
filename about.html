@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloth Factory | About</title>
+  <link rel="stylesheet" href="styles/glass-core.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page page-about">
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="logo"><a href="./index.html"><img id="logo" src="image copy 3.png" alt="Cloth Factory logo" /></a>
+      </div>
+      <div class="nav-actions">
+        <ul class="navitems">
+          <li class="ni"><a href="./index.html">home</a></li>
+          <li class="ni"><a href="./shop.html">shop</a></li>
+          <li class="ni"><a href="./about.html" aria-current="page">about</a></li>
+          <li class="ni"><a href="./cart.html">cart (<span id="cartCount">0</span>)</a></li>
+          <li class="ni"><button id="openCartBtn" class="cart-trigger" aria-label="Open cart">🛒 <span
+                id="cartCountNav">0</span></button></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☼</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero reveal">
+      <div>
+        <p class="detail-eyebrow">cloth factory manifesto</p>
+        <h1 class="head">Wear what moves you.</h1>
+        <p class="hero-copy">
+          Style is how you announce your presence. Our glassy silhouettes and bold prints are engineered to let you
+          show up fully, every single day.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-grid">
+      <article class="about-card glass-panel reveal" data-tilt-card>
+        <h2 class="about-title">Our story</h2>
+        <p>
+          Born in 2015 from late-night studio sessions and a love for expressive streetwear, Cloth Factory blends clean
+          tailoring with graphic nostalgia. We design elevated essentials that flex between creative meetings and
+          midnight adventures with ease.
+        </p>
+        <p>
+          Every drop balances texture, comfort, and intention. We obsess over buttery fabrics, glass-inspired layering,
+          and silhouettes that move with you. Because confidence should never feel forced.
+        </p>
+      </article>
+      <article class="about-card glass-panel reveal" data-tilt-card>
+        <h2 class="about-title">What drives us</h2>
+        <ul class="about-list">
+          <li><span>Sustainability</span> Low-waste production, mindful sourcing, planet-first packaging.</li>
+          <li><span>Community</span> We design alongside artists, skaters, and storytellers across the globe.</li>
+          <li><span>Versatility</span> Pieces that transition from errands to after-hours without missing a beat.</li>
+          <li><span>Expression</span> Collections that celebrate individuality over trends.</li>
+        </ul>
+        <p>Cloth Factory is more than a label—it is a movement of people wearing their story with pride.</p>
+      </article>
+    </section>
+  </div>
+  <footer class="footer">
+    <h6>cloth factory &middot; all rights reserved</h6>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer__backdrop" id="cartDrawerBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__content">
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="closeCartBtn" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-drawer__items" id="cartDrawerItems">
+        <div class="cart-drawer__empty" id="cartDrawerEmpty">
+          <div class="cart-drawer__empty-icon">🛒</div>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-drawer__footer" id="cartDrawerFooter" style="display: none;">
+        <div class="cart-drawer__total">
+          <span>Total:</span>
+          <span class="paise" id="cartDrawerTotal">rs-0</span>
+        </div>
+        <a href="./checkout.html" class="btn cart-drawer__checkout">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

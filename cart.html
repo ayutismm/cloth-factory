@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloth Factory | Cart</title>
+    <link rel="stylesheet" href="styles/glass-core.css" />
+    <link rel="stylesheet" href="product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page page-cart">
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="logo"><a href="./index.html"><img id="logo" src="image copy 3.png" alt="Cloth Factory logo" /></a></div>
+        <div class="nav-actions">
+          <ul class="navitems">
+            <li class="ni"><a href="./index.html">home</a></li>
+            <li class="ni"><a href="./shop.html">shop</a></li>
+            <li class="ni"><a href="./about.html">about</a></li>
+            <li class="ni"><a href="./cart.html" aria-current="page">cart (<span id="cartCount">0</span>)</a></li>
+          </ul>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☼</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+      </nav>
+      <section class="product-detail glass-panel reveal">
+        <h3 class="detail-title">Your cart</h3>
+        <div id="cartItems" class="cart-list"></div>
+        <p id="cartEmpty" class="empty-state" style="display:none;">Your cart is empty.</p>
+        <div class="cart-footer">
+          <div class="paise">Total: rs-<span id="cartTotal">0</span></div>
+          <div class="detail-actions">
+            <button class="btn btn--ghost" id="clearCart">Clear cart</button>
+            <a href="./checkout.html" class="btn" id="checkoutBtn">Checkout</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <h6>cloth factory &middot; all rights reserved</h6>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+  </html>

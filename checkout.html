@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloth Factory | Checkout</title>
+  <link rel="stylesheet" href="styles/glass-core.css" />
+  <link rel="stylesheet" href="product.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page page-checkout">
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="logo"><a href="./index.html"><img id="logo" src="image copy 3.png" alt="Cloth Factory logo" /></a>
+      </div>
+      <div class="nav-actions">
+        <ul class="navitems">
+          <li class="ni"><a href="./index.html">home</a></li>
+          <li class="ni"><a href="./shop.html">shop</a></li>
+          <li class="ni"><a href="./about.html">about</a></li>
+          <li class="ni"><a href="./cart.html">cart (<span id="cartCount">0</span>)</a></li>
+          <li class="ni"><button id="openCartBtn" class="cart-trigger" aria-label="Open cart">🛒 <span
+                id="cartCountNav">0</span></button></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☼</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </nav>
+    <section class="product-detail glass-panel reveal" data-tilt-card>
+      <h3 class="detail-title">Checkout</h3>
+      <div id="checkoutSummary" class="cart-list"></div>
+      <form id="checkoutForm" class="form-grid checkout-form">
+        <label class="form-field">
+          <span>Full Name</span>
+          <input type="text" id="fullName" required />
+        </label>
+        <label class="form-field">
+          <span>Email</span>
+          <input type="email" id="email" required />
+        </label>
+        <label class="form-field">
+          <span>Address</span>
+          <input type="text" id="address" required />
+        </label>
+        <label class="form-field">
+          <span>City</span>
+          <input type="text" id="city" required />
+        </label>
+        <label class="form-field">
+          <span>ZIP Code</span>
+          <input type="text" id="zip" required pattern="\d{4,10}" />
+        </label>
+        <label class="form-field">
+          <span>Payment Method</span>
+          <select id="payment" required>
+            <option value="card">Card</option>
+            <option value="cod">Cash on Delivery</option>
+          </select>
+        </label>
+        <div class="detail-actions" style="justify-content: flex-end;">
+          <button class="btn" type="submit">Place order</button>
+        </div>
+      </form>
+    </section>
+  </div>
+  <footer class="footer">
+    <h6>cloth factory &middot; all rights reserved</h6>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer__backdrop" id="cartDrawerBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__content">
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="closeCartBtn" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-drawer__items" id="cartDrawerItems">
+        <div class="cart-drawer__empty" id="cartDrawerEmpty">
+          <div class="cart-drawer__empty-icon">🛒</div>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-drawer__footer" id="cartDrawerFooter" style="display: none;">
+        <div class="cart-drawer__total">
+          <span>Total:</span>
+          <span class="paise" id="cartDrawerTotal">rs-0</span>
+        </div>
+        <a href="./checkout.html" class="btn cart-drawer__checkout">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
