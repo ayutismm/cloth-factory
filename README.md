@@ -17,13 +17,13 @@
 
 ## ✨ Features
 
-- 📚 Full product **catalogue browsing**
-- 🛒 Working **shopping cart** functionality
-- 🌗 **Light/Dark mode** toggle
-- 🧊 Modern **glassmorphism UI**
-- 🎯 Reactive **tilt animations** on product cards
-- 🧾 Separate **cards for each product**
-- 🔐 **Login / Signup** required at checkout
+-  Full product **catalogue browsing**
+-  Working **shopping cart** functionality
+-  **Light/Dark mode** toggle
+-  Modern **glassmorphism UI**
+-  Reactive **tilt animations** on product cards
+-  Separate **cards for each product**
+-  **Login / Signup** required at checkout
 
 
 ---
@@ -40,8 +40,9 @@
 ## 🚀 Live Demo
 
 **Live Project Link:**  
-👉 https://ayutismm.github.io/cloth-factory/
+ https://ayutismm.github.io/cloth-factory/
 
 ---
+
 
 
