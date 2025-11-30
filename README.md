@@ -24,14 +24,14 @@
 - 🎯 Reactive **tilt animations** on product cards
 - 🧾 Separate **cards for each product**
 - 🔐 **Login / Signup** required at checkout
-- 📱 **Responsive design** for different screen sizes
+
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5**
-- **CSS3**
+- **HTML**
+- **CSS**
 - **JavaScript**
 - **GitHub Pages** for deployment
 
@@ -44,8 +44,4 @@
 
 ---
 
-## 📂 How to Run Locally
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ayutismm/cloth-factory.git
